@@ -1,3 +1,9 @@
+:root {
+  --pos-left: 0rem;
+  --pos-top: 0rem;
+  --square-size: 40px;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -11,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +30,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -40,3 +49,73 @@
 .read-the-docs {
   color: #888;
 }
+
+/*
+.cell {
+  margin: 0;
+  top: var(--pos-top);
+  left: var(--pos-left);
+
+  width: var(--square-size);
+  height: var(--square-size);
+  background-color: forestgreen;
+  border: 1px solid black;
+}*/
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  /* Ajusta el número de columnas y el tamaño de las celdas según tus necesidades */
+  grid-template-rows: repeat(10, 40px);
+  /* Ajusta el número de filas y el tamaño de las celdas según tus necesidades */
+  grid-gap: 2px;
+  /* Espacio entre las celdas */
+  background-color: #ccc;
+  /* Color de fondo del grid */
+  margin-top: 20px;
+  /* Margen superior */
+}
+
+.cell {
+  background-color: #fff;
+  /* Color de fondo de las celdas */
+  border: 1px solid #aaa;
+  /* Borde de las celdas */
+}
+
+.start {
+  background-color: green;
+  /* Color de fondo del punto de inicio */
+}
+
+.end {
+  background-color: red;
+  /* Color de fondo del punto de fin */
+}
+
+
+/* STYLES MATRIX 
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 1px;
+}
+
+
+.start {
+  background - color: green;
+}
+
+.end {
+  background - color: red;
+}
+
+.obstacle {
+  background - color: gray;
+}
+
+.path {
+  background - color: yellow;
+}*/
